@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastgele Kedi! 🙀</title>
+</head>
+<body style="background-color: rgb(93, 93, 241);">
+    <h1 style="font-family: 'Times New Roman', Times, serif; text-align: center; margin-top: 15%; color: rgb(255, 255, 255);">Random Cat Generator</h1>
+  <img id="cat" src="" alt="Kedi Yükleniyor." height="40%" width="20%" style="margin-left: 40%; margin-top: -1%;">
+  <script>
+    fetch('https://api.thecatapi.com/v1/images/search')
+      .then(response => response.json())
+      .then(data => {
+        const catUrl = data[0].url;
+        document.getElementById('cat').src = catUrl;
+      });
+  </script>
+</html>
+</body>
+</html>
